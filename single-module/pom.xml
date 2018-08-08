@@ -9,7 +9,8 @@
   <version>1.0-SNAPSHOT</version>
   <name>A Single Maven Module</name>
   <description>Sample single module Maven project with a working, deployable site.</description>
-  <url>http://www.example.com</url>
+  <!--<url>http://www.example.com</url>-->
+   <url>https://nexus.gcnp.local</url>      
 
   <properties>
     <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>

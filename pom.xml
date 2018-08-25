@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.example.maven-samples</groupId>
-  <artifactId>Nexus</artifactId>
+  <artifactId>parent</artifactId>
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>Parent</name>
@@ -42,8 +42,6 @@
           <artifactId>maven-deploy-plugin</artifactId>
           <version>2.8.2</version>
         </plugin>
-                    
-             
      <plugin>
    <groupId>org.sonatype.plugins</groupId>
    <artifactId>nexus-staging-maven-plugin</artifactId>
@@ -64,13 +62,13 @@
    </configuration>
 </plugin>
 
-      
+
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>sonar-maven-plugin</artifactId>
           <version>2.7.1</version>
         </plugin>
-           
+
     </plugins>
   </build>
   <dependencies>
@@ -81,7 +79,7 @@
         </dependency>
   </dependencies>
 <!--<distributionManagement>
-     <repository>
+          <repository>
             <id>sonar</id>
         <url>https://sonar.gcnp.local</url>
         </repository>
@@ -106,4 +104,3 @@
 
 
 </project>
-

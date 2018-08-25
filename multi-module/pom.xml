@@ -9,8 +9,7 @@
   <version>1.0-SNAPSHOT</version>
   <name>Multi Module Project Parent</name>
   <description>Sample multi module Maven project with a working, deployable site.</description>
-  <!--<url>http://www.example.com</url>-->
-         <url>https://nexus.gcnp.local:</url>
+ <url>http://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
@@ -23,7 +22,7 @@
   </modules>
 
  <!-- <distributionManagement>
-    <site>
+          <site>
       <id>site-server</id>
       <name>Test Project Site</name>
       <url>file:///tmp/multi-module-site</url>
@@ -34,16 +33,16 @@
      <repository>
             <id>Release</id>
             <name>SAMPLE_REL</name>
-            <url>https://nexus.gcnp.local/repository/SAMPLE_REL/</url>
+            <url>https://nexus.gc.local/repository/SAMPLE_REL/</url>
         </repository>
       <snapshotRepository>
             <id>Snapshot</id>
             <name>SAMPLE_SNAP</name>
-            <url>https://nexus.gcnp.local/repository/SAMPLE_SNAP/</url>
+            <url>https://nexus.gc.local/repository/SAMPLE_SNAP/</url>
         </snapshotRepository>
     </distributionManagement>
 <!-- <distributionManagement>
-     <repository>
+          <repository>
             <id>Release</id>
             <name>SAMPLE_REL</name>
             <url>http://10.0.1.13:8081/repository/SAMPLE_REL/</url>
@@ -109,26 +108,6 @@
         </configuration>
       </plugin>
     </plugins>
-           
-           <plugin>
-   <groupId>org.sonatype.plugins</groupId>
-   <artifactId>nexus-staging-maven-plugin</artifactId>
-   <version>1.5.1</version>
-   <executions>
-      <execution>
-         <id>default-deploy</id>
-         <phase>deploy</phase>
-         <goals>
-            <goal>deploy</goal>
-         </goals>
-      </execution>
-   </executions>
-   <configuration>
-      <serverId>nexus</serverId>
-      <nexusUrl>https://nexus.gcnp.local/</nexusUrl>
-      <skipStaging>true</skipStaging>
-   </configuration>
-</plugin>
 
     <pluginManagement>
       <plugins>
@@ -198,6 +177,25 @@
           <artifactId>taglist-maven-plugin</artifactId>
           <version>2.4</version>
         </plugin>
+        <plugin>
+   <groupId>org.sonatype.plugins</groupId>
+   <artifactId>nexus-staging-maven-plugin</artifactId>
+   <version>1.5.1</version>
+   <executions>
+      <execution>
+         <id>default-deploy</id>
+         <phase>deploy</phase>
+         <goals>
+            <goal>deploy</goal>
+         </goals>
+      </execution>
+   </executions>
+   <configuration>
+      <serverId>nexus</serverId>
+      <nexusUrl>https://nexus.gc.local/</nexusUrl>
+      <skipStaging>true</skipStaging>
+   </configuration>
+</plugin>
 
         <plugin>
           <groupId>org.mortbay.jetty</groupId>

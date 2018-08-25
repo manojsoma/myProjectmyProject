@@ -59,7 +59,7 @@
    </executions>
    <configuration>
       <serverId>nexus</serverId>
-      <nexusUrl>https://nexus.gcnp.local/</nexusUrl>
+      <nexusUrl>https://nexus.gc.local/</nexusUrl>
       <skipStaging>true</skipStaging>
    </configuration>
 </plugin>

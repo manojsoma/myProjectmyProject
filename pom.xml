@@ -91,12 +91,12 @@
     </distributionManagement>-->
   <distributionManagement>
      <repository>
-            <id>Release</id>
+            <id>deployment</id>
             <name>SAMPLE_REL</name>
             <url>https://nexus.gc.local/repository/SAMPLE_REL/</url>
         </repository>
     <snapshotRepository>
-            <id>Snapshot</id>
+            <id>deployment</id>
             <name>SAMPLE_SNAP</name>
             <url>https://nexus.gc.local/repository/SAMPLE_SNAP/</url>
         </snapshotRepository>
